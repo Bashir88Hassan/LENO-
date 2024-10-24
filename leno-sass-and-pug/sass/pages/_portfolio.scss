@@ -1,0 +1,52 @@
+//*import mixins
+@use './../mixin/mixin'as *;
+//*import vars
+@use './../layout/variables'as *;
+
+/*Start portfolio*/
+.portfolio {
+    transition: 0.5px;
+    @include padding();
+    background-color: $section-background;
+
+    .portfolio-content {
+        @include grid();
+        margin-top: 80px;
+
+        .card {
+            background-color: white;
+            position: relative;
+            transition: 0.3s;
+            overflow: hidden;
+            border-radius: 20px;
+
+            &:hover {
+                box-shadow: 0 0 20px #777;
+                bottom: 5px;
+                border: 2px solid $main-color;
+
+            }
+
+            img {
+                max-width: 100%;
+                background-size: cover;
+            }
+
+            .info {
+                padding: 20px;
+
+                h3 {
+                    margin: 0;
+                }
+
+                p {
+                    color: #777;
+                    line-height: 1.8;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+/*End portfolio*/

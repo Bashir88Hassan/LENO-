@@ -1,0 +1,38 @@
+// Import mxin
+@use '../mixin/mixin'as *;
+
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "work Sans", sans-serif;
+    
+}
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include brekpoint(small) {
+        width: 750px;
+    }
+
+    @include brekpoint(medium) {
+        width: 970px;
+    }
+
+    @include brekpoint(large) {
+        width: 1170;
+    }
+}
+
+/*End Golbal Rules*/

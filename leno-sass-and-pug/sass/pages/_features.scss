@@ -1,0 +1,55 @@
+@use './../layout/variables'as *;
+@use './../mixin/mixin'as *;
+
+/*Start Features*/
+.features {
+    @include padding();
+    background-color: $section-background;
+
+    .container {
+        @include grid();
+    }
+
+    .feat {
+        padding: 20px;
+        text-align: center;
+        transition: 0.3s;
+        border-radius: 20px;
+
+        &:hover {
+            border: 1px solid $main-color;
+            
+            box-shadow: 0 0 10px #ddd;
+
+
+            i {
+                color: $secondary-color;
+                transition: 3.3s;
+            }
+
+            h3 {
+                color: $main-color;
+            }
+
+        }
+
+        i {
+            color: $main-color;
+        }
+
+        h3 {
+            font-weight: 800;
+            margin: 30px 0;
+            color: $secondary-color;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #777;
+            font-size: 17px;
+        }
+    }
+
+}
+
+/*End Features*/

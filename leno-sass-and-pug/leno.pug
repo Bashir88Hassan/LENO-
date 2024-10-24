@@ -1,0 +1,132 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        // main Template css file
+        link(rel="stylesheet", href="../leno.css")
+        // render all elements normally
+        link(rel="stylesheet", href="../css/normalize.css")
+        //font asesom library
+        link(rel="stylesheet", href="../css/all.min.css")
+        // google fonts
+        link(rel="preconnect", href="https:// fonts.gstatic.com")
+        title Bashir Hassan
+    body 
+        // statr header
+        .header 
+            .container 
+                img(class = "logo",src="../images/logo.png", alt="logo")
+                .links 
+                    span.icon 
+                        span
+                        span
+                        span
+                    ul 
+                        li: a(href="#services") Services
+                        li: a(href="#portfolio") Portfolio
+                        li: a(href="#about") About
+                        li: a(href="#contact") Contact
+                    
+        // end header
+        // Start landing
+        .landing 
+            .intro-text 
+                h1 Hello There 
+                p I'am  Bashir Hassan - Web Developer
+            ul 
+                li 
+                li.active
+                li 
+            
+        //end landin
+        //Start Features
+        .features 
+            .container 
+                - for (let i =0; i<3;i++)
+                    -let fe = ["magic", "gem", "globe-asia"]
+                    // start feat
+                    .feat 
+                        i(class="fas fa-"+ fe[i] + " fa-3x")
+                        h3 Tell Us Your Idea 
+                        p Lorem ipsum dolor sit amet, 
+                    //end feat
+                
+        //End Features
+        //start services
+        .services#services
+            .container 
+                h2.special-heading Services 
+                p be active
+                .services-content
+                    - for (let i =0 ; i< 2; i++)
+                        //start col-1
+                        .col 
+                            //start service
+                            .srv 
+                                i(class = ("fas fa-palette fa-2x"))
+                                .text
+                                    h3 Graphic Design
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos saepe ut ipsam quas molestias ad. Vero suscipit nostrum praesentium, nisi debitis magni iste eos ratione numquam quis quod rerum at?
+                            //end service
+                            //start service
+                            .srv 
+                                i(class = ("fab fa-sketch fa-2x"))
+                                .text
+                                    h3 Ui Ux
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos saepe ut ipsam quas molestias ad. Vero suscipit nostrum praesentium, nisi debitis magni iste eos ratione numquam quis quod rerum at?
+                            //end service
+                        //end col-1
+                    //Start col-3
+                    .col
+                        div(class = "image  image-col")
+                            img(src="../images/services.jpg", alt="services")
+                    //End col-3
+        //end services
+        //start portfolio
+        .portfolio#portfolio
+            .container 
+                h2(class = "special-heading") Portfolio
+                p If you do it right, it will last forever
+                .portfolio-content 
+                    - for(i=1;i<4;i++)
+                        .card 
+                            img(src="../images/portfolio-"+i+".jpg", alt="landing-1")
+                            .info 
+                                h3 Title
+                                p Lorem ipsum dolor sit amen, consenter adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        //end portfolio
+        // start About
+        .about#about
+            .container 
+                h2(class = "special-heading") About 
+                p Less is more word
+                .about-content 
+                    .image 
+                        img(src="../images/about.jpg", alt="about")
+                    .text 
+                        p I'am Web Developer
+                        hr
+                        p  I,am ready to help you for your bessel's or web side
+        //end About
+        //start contact
+        .contact#contact
+            .container 
+                h2.special-heading Contact 
+                p we are born to create
+                .info 
+                    p.label Feel free to drop us a line at:
+                    a(href="mailto:bashir99hassan@gmail.com?subject=Contact" class = "link") Mailto:bashir99hassan@gmail.com
+                    .social find us on social Networks 
+                        i(class = "fab fa-youtube")
+                        i(class = "fab fa-facebook-f")
+                        i(class = "fab fa-twitter")
+                    
+        //end contact
+        //start footer
+        .footer &copy; 2021 <span> leno <span> All Right Reserved
+        //end footer
+        //script
+        script(src="../main.js") 
+        //end script

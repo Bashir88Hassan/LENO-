@@ -1,0 +1,35 @@
+//Import mixins
+@use './sass/mixin/mixin' as *;
+
+//Import Vars
+@use './sass/layout/variables' as *;
+
+// Import Global Rules
+@use './sass/layout/global-Rules';
+
+//componets
+@use './sass/layout/componets';
+
+//Import Header
+@use './sass/pages/header';
+
+//Import landing
+@use './sass/pages/landing';
+
+//Import landing
+@use './sass/pages/features';
+
+//import services
+@use './sass/pages/services';
+
+//Import portfoloi
+@use './sass/pages/portfolio';
+
+//import about
+@use './sass/pages/about';
+
+//import contact
+@use './sass/pages/contact';
+
+//import footer
+@use './sass/pages/footer';

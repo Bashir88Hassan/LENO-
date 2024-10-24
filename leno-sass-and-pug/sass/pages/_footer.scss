@@ -1,0 +1,17 @@
+@use './../layout/variables' as *;
+@use './../mixin/mixin' as *;
+//start footer
+/*start footer*/
+.footer{
+    background-color: $secondary-color;
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 18px;
+    span{
+        font-weight: bold;
+        color: $main-color;
+    }
+}
+/*End footer*/
+//end footer

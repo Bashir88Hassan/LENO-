@@ -1,0 +1,65 @@
+@use './../layout/variables' as *;
+@use './../mixin/mixin' as *;
+// start services
+.services {
+    @include padding();
+    .services-content {
+        @include grid();
+        margin-top: 100px;
+        .srv{
+            display: flex;
+            margin-bottom: 40px;
+            transition: 0.3s;
+            border-radius: 20px;
+            padding: 20px;
+            
+            &:hover{
+                border: 1px solid $main-color;
+                box-shadow: 0 0 10px #ddd;
+                
+            }
+            @include brekpoint(mobile){
+                flex-direction: column;
+                text-align: center;
+            }
+            i{
+                color: $main-color;
+                flex-basis: 60px;
+            }
+            .text{
+                flex: 1;
+                h3{
+                    margin: 0px 0px 20px;
+                }
+                p{
+                    color: #777;
+                    font-weight: 300;
+                    line-height: 1.8;
+                }
+            }
+            }
+            
+            .image{
+                text-align: center;
+                position: relative;
+                img{
+                    width: 260px;
+                }
+                &::before{
+                    content: "";
+                    background-color: $secondary-color;
+                    width: 80px;
+                    height: calc(100% + 100px);
+                    position: absolute;
+                    right: 0;
+                    top: -50px;
+                    z-index: -1;
+                }
+                @media (max-width:1199px) {
+                        display: none;
+                }
+        }
+    }
+    
+}
+// end services

@@ -1,0 +1,85 @@
+/*Start Header*/
+@use "./../layout/variables" as *;
+.header{
+    padding: 20px;
+
+    .container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        width: 60px;
+    }
+    .links{
+        position: relative;
+        .icon{
+            width: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            span{
+                background-color: #333;
+                margin-bottom: 5px;
+                height: 2px;
+                &:first-child{
+                    width: 100%;
+                }
+                &:nth-child(2){
+                    width: 60%;
+                    transition: .3s;
+                }
+                &:last-child{
+                    width: 100%;
+                }
+            }
+            
+        }
+        &:hover .icon span:nth-child(2){
+            width: 100%;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0px;
+            background-color: #f1f1f1;
+            position: absolute;
+            right: 0px;
+            top: calc(100% + 15px);
+            min-width:200px;
+            display: none;
+            z-index: 1;
+            &::before{
+                content: "";
+                position: absolute;
+                border: solid 10px transparent;
+                border-bottom-color: #f1f1f1;
+                right: 5px;
+                top: -20px;
+            }
+            a{
+                display: block;
+                padding: 15px;
+                text-decoration: none;
+                color: #333;
+                transition: .3s;
+                position: relative;
+                &:hover{
+                    padding-left: 25px;    
+                    color: $main-color;
+                    border-bottom: 1px solid $main-color;
+                }
+                
+            }
+            li:not(:last-child) a {
+                border-bottom: 1px solid #ddd;
+                
+            }
+        }
+        &:hover{
+            ul{
+                display: block;
+            }
+        }
+    }
+}
